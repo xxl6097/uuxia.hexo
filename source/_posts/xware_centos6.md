@@ -25,18 +25,15 @@ adduser thunder
 chown -R thunder:thunder /home/thunder/Xware
 ```
 6. 给~/TDDOWNLOAD设置为thunder权限
+     
+    `chown thunder:thunder /TDDOWNLOAD`
+
+7. 修改迅雷默认下载目录启动后自动挂载至/TDDOWNLOAD
 
 
-```
-chown thunder:thunder /TDDOWNLOAD
-``` 
+    vi /etc/fstab 添加以下一条
+    TDDOWNLOAD /TDDOWNLOAD   none  bind  0 0
 
-7 修改迅雷默认下载目录启动后自动挂载至/TDDOWNLOAD
-
-```
-vi /etc/fstab 添加以下一条
-TDDOWNLOAD     /TDDOWNLOAD   none  bind  0 0
-```
 
 设置完成后
 
@@ -75,7 +72,7 @@ cd /home/thunder/Xware/
 
 记住最后的那个六位的码，然后使用浏览器登陆 [http://yuancheng.xunlei.com](http://yuancheng.xunlei.com) 输入六位的的字符进行绑定设备。
 
-11 如果绑定成功后，再次运行portal 的话会显示 绑定的用户名。
+11. 如果绑定成功后，再次运行portal 的话会显示 绑定的用户名。
 端口默认为9000
 
 12. 配置为开机自动启动portal
