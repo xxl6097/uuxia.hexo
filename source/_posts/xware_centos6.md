@@ -30,16 +30,19 @@ chown -R thunder:thunder /home/thunder/Xware
 
 7. 修改迅雷默认下载目录启动后自动挂载至/TDDOWNLOAD
 
-
-    vi /etc/fstab 添加以下一条
-    TDDOWNLOAD /TDDOWNLOAD   none  bind  0 0
+```
+vi /etc/fstab 添加以下一条
+TDDOWNLOAD /TDDOWNLOAD   none  bind  0 0
+```
 
 
 设置完成后
 
 8.重启服务器
 
-    ``` reboot ```
+``` 
+reboot
+```
 
 9.重启后使用mount 查看挂载情况，如挂载成功如下：
 
