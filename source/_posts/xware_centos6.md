@@ -25,8 +25,9 @@ adduser thunder
 chown -R thunder:thunder /home/thunder/Xware
 ```
 6. 给~/TDDOWNLOAD设置为thunder权限
-     
-    `chown thunder:thunder /TDDOWNLOAD`
+
+```chown thunder:thunder /TDDOWNLOAD
+```
 
 7. 修改迅雷默认下载目录启动后自动挂载至/TDDOWNLOAD
 
@@ -35,8 +36,9 @@ vi /etc/fstab 添加以下一条
 TDDOWNLOAD /TDDOWNLOAD   none  bind  0 0
 ```
 
-
 设置完成后
+
+
 
 8.重启服务器
 
